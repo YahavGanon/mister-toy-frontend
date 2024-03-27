@@ -1,19 +1,16 @@
-export function Home() {
-  return (
-    <section className="welcome">
-      <h2 className="center">Your toy platform</h2>
-      
 
-      <div className="images">
-            {/* <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/HoltCat.png" alt="" />
-            <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/canva.png" alt="" />
-            <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/coca_cola.png" alt="" />
-            <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/oxy.png" alt="" />
-            <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/lionsgate.png" alt="" />
-            <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/carrefour.png" alt="" />
-            <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/bd.png" alt="" />
-            <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/universal.png" alt="" /> */}
-        </div>
+import { useSelector } from "react-redux"
+import { Link, Outlet } from "react-router-dom"
+
+
+export function Home() {
+  const user = useSelector(storeState => storeState.userModule.loggedInUser)
+  return (
+    <section className="home">
+      <h1 className="center">Your toy platform</h1>
+      {!user && <Link to="/started" ><button className="start-btn">Get stated</button></Link> }
+        <Link to="/about" ><button className="start-btn">About</button></Link>
+        <Outlet/>
     </section>
   )
 }

@@ -25,24 +25,21 @@ export function AppHeader() {
     }
 
     return (
-        <header>
-            <nav>
+        <header className="header">
+            <h1>MisterToy</h1>
+            <nav className="nav-bar">
                 <NavLink to="/">Home</NavLink> |<NavLink to="/toy">Toys</NavLink> |
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/dashboard">Dashboard</NavLink> |<NavLink to="/about">About</NavLink>
             </nav>
 
-            {user ? (
+            {user &&
                 <section>
                     <Link className="user-details" to={`/user/${user._id}`}>
                         Hello {user.fullname} 🪀
                     </Link>
                     <Link to={`/`} onClick={onLogout}>Logout</Link>
-                </section>
-            ) : (
-                <section>
-                    <LoginSignup onSetUser={onSetUser} />
-                </section>
-            )}
+                </section>}
+
         </header>
     )
 }

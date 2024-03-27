@@ -10,7 +10,8 @@ export const toyService = {
     save,
     remove,
     getEmptyToy,
-    getDefaultFilter
+    getDefaultFilter,
+    countLabels
 }
 
 function query(filterBy = {}) {
@@ -42,5 +43,25 @@ function getEmptyToy() {
 }
 
 function getDefaultFilter() {
-    return { txt: '',inStock: 'all',  pageIdx: 0, maxPrice: ''}
+    return { txt: '', inStock: 'all', pageIdx: 0, maxPrice: '' }
 }
+
+function countLabels(dollsArray) {
+    let labelCounts = {}
+//{ label: 'adventure', count: 10 }
+
+    dollsArray.forEach(doll => {
+        if (doll.labels && Array.isArray(doll.labels)) {
+            doll.labels.forEach(label => {
+                if (labelCounts[label]) {
+                    labelCounts[label]++
+                } else {
+                    labelCounts[label] = 1
+                }
+            })
+        }
+    })
+
+    return labelCounts
+}
+

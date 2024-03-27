@@ -4,13 +4,17 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js';
 import { userService } from '../services/user.service.js';
 import { login, signup } from '../store/actions/user.actions.js';
 import { LoginForm } from './LoginForm.jsx';
+import { useNavigate } from 'react-router-dom';
+
+
 
 
 
 export function LoginSignup() {
-  const [isSignup, setIsSignUp] = useState(false)
+    const [isSignup, setIsSignUp] = useState(false)
+    const navigate = useNavigate()
 
-  const [credentials, setCredentials] = useState(userService.getEmptyCredentials())
+    const [credentials, setCredentials] = useState(userService.getEmptyCredentials())
 
     function handleChange({ target }) {
         const { name: field, value } = target
@@ -30,16 +34,18 @@ export function LoginSignup() {
         login(credentials)
             .then(() => { showSuccessMsg('Logged in successfully') })
             .catch((err) => { showErrorMsg('Oops try again') })
+            navigate('/toy')
     }
 
     function _signup(credentials) {
         signup(credentials)
             .then(() => { showSuccessMsg('Signed in successfully') })
             .catch((err) => { showErrorMsg('Oops try again') })
+            navigate('/toy')
     }
 
-  return (
-    <div className="login-input">
+    return (
+        <div className="login-input">
             <form className="login-signup" onSubmit={handleSubmit}>
                 <input
                     type="text"

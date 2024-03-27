@@ -85,6 +85,79 @@ nav a:hover {
     color: gold;
 }
 
-.toy-preview-img{
-    width:3em;
+.toy-preview-img {
+    width: 3em;
+}
+
+.chart {
+    width: 4em;
+    height: 4em;
+}
+
+.google-map {
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.home {
+    text-align: center;
+}
+
+.home h1 {
+    margin-top: 3em;
+    font-size: 2em;
+}
+
+.start-btn {
+    margin: 1em;
+    font-size: 1.5em;
+    font-weight: 500;
+    background-color: rgb(234, 67, 53);
+    border: none;
+    width: 7em;
+    padding: 15px;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 95%;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.started-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+
+    padding: 0px 50px;
+    margin-bottom: 40px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar{
+    line-height: 55px;
 }

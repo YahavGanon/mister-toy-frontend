@@ -18,6 +18,8 @@ export function ToyIndex() {
     const toys = useSelector(storeState => storeState.toyModule.toys)
     const filterBy = useSelector(storeState => storeState.toyModule.filterBy)
     const isLoading = useSelector(storeState => storeState.toyModule.isLoading)
+    const user = useSelector(storeState => storeState.userModule.loggedInUser)
+
 
     useEffect(() => {
         loadToys()
@@ -46,18 +48,29 @@ export function ToyIndex() {
 
     return (
         <main>
-            <h3>Our Toys</h3>
-            <main>
-                <div className='toys-actions'>
-                    <button onClick={onAddToy}>Add Toy 🧸</button>
-                    <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
-                    <Pagination filterBy={filterBy} onSetFilter={onSetFilter} />
+
+            {user ? (
+                <section>
+                    <h3>Our Toys</h3>
+                    <main>
+                        <div className='toys-actions'>
+                            <button onClick={onAddToy}>Add Toy 🧸</button>
+                            <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
+                            <Pagination filterBy={filterBy} onSetFilter={onSetFilter} />
+                        </div>
+                        {!isLoading
+                            ? <ToyList toys={toys} onRemoveToy={onRemoveToy} />
+                            : <img className="loading-img" src="https://i.pinimg.com/originals/6b/e0/89/6be0890f52e31d35d840d4fe2e10385b.gif" alt="" />
+                        }
+                    </main>
+                </section>
+            ) : (
+                <div>
+                    <h1>You must be a logged in user to purchase our toys...</h1>
+                    <img src="https://st2.depositphotos.com/1252248/9434/v/450/depositphotos_94342060-stock-illustration-pop-art-comics-style.jpg" alt="" />
                 </div>
-                {!isLoading
-                    ? <ToyList toys={toys} onRemoveToy={onRemoveToy} />
-                    : <img className="loading-img" src="https://i.pinimg.com/originals/6b/e0/89/6be0890f52e31d35d840d4fe2e10385b.gif" alt="" />
-                }
-            </main>
+            )}
+
         </main>
     )
 }

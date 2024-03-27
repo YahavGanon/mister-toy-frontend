@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
-import { toyService } from '../services/toy.service.js'
+// import { toyService } from '../services/toy.service.js'
 import { ToyFilter } from '../cmps/ToyFilter.jsx'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { ToyList } from '../cmps/ToyList.jsx'

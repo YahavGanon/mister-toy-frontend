@@ -20,10 +20,8 @@ export function ToyFilter({ filterBy, onSetFilter }) {
 
     return (
         <form>
-
             <div className="radio-sort flex justify-center align-center">
                 <label htmlFor="all">
-
                     <input defaultChecked type="radio" name="inStock" value="all" id="all" onChange={handleChange} />
                     All
                 </label>

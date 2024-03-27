@@ -10,6 +10,9 @@ import { useNavigate } from 'react-router-dom'
 import { Pagination } from '../cmps/Pagination.jsx'
 
 
+
+
+
 export function ToyIndex() {
     const navigate = useNavigate()
     const toys = useSelector(storeState => storeState.toyModule.toys)

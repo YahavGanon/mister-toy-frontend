@@ -1,0 +1,10 @@
+{
+    "header": {
+        "message": "Mister Toy"
+    },
+    "home": {
+        "body": "Your toy platform",
+        "button":"Get stated",
+        "About":"About"
+    }
+}

@@ -3,6 +3,7 @@ import GoogleMapReact from 'google-map-react';
 
 const AnyReactComponent = ({ text }) => <div style={{fontSize:'3.5em'}}>{text}</div>;
 
+
 export function GoogleMap() {
     const [coords, setCoords] = useState({ lat: 32.310390, lng: 34.857450 })
     const zoom = 11

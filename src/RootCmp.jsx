@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { AppHeader } from './cmps/AppHeader.jsx'
 import { AppFooter } from './cmps/AppFooter.jsx'
 
-
 import { store } from './store/store.js'
 import { ToyIndex } from './pages/ToyIndex.jsx'
 import { ToyEdit } from './pages/ToyEdit.jsx'
@@ -15,7 +14,6 @@ import { Home } from './pages/Home.jsx'
 import { Dashboard } from './pages/Dashboard.jsx'
 import { Started } from './pages/Started.jsx'
 import { About } from './pages/About.jsx'
-
 
 
 export function App() {

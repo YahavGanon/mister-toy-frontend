@@ -34,19 +34,22 @@ export function AppHeader() {
     return (
         <header className="header">
             <div className="first-line">
-                <h1>MisterToy</h1>
+                <div className="logo">
+                    {/* <img className="img-logo" src="https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-cute-bear-teddy-toy-png-image_10149481.png" alt="" />
+                    <h1 className="h1-logo">MisterToy</h1> */}
+                  <NavLink to="/"> <img className="img-logo" src="img/MisterToy_transparent.png" alt="" /></NavLink>
+                </div>
                 <nav className="nav-bar">
-                    <NavLink to="/">Home</NavLink> |<NavLink to="/toy">Toys</NavLink> |
-                    <NavLink to="/dashboard">Dashboard</NavLink> 
+                    <NavLink to="/"><img className="nav-img" src="https://iconbug.com/download/size/256/icon/2897/toy-house/" alt="" /></NavLink> |<NavLink to="/toy">Toys</NavLink> |
+                    <NavLink to="/dashboard"><img className="nav-img" src="https://static-00.iconduck.com/assets.00/increase-stats-icon-2021x2048-87in2u2l.png" alt="" /></NavLink>
                 </nav>
             </div>
-            {/* <NavLink to="/about">About</NavLink> */}
             {user &&
-                <section>
-                    <Link className="user-details" to={`/user/${user._id}`}>
+                <section style={{textAlign: "center"}}>
+                    <Link style={{textDecoration: "none", color:"#333"}} className="user-details" to={`/user/${user._id}`}>
                         Hello {user.fullname} 🪀
                     </Link>
-                    <Link to={`/`} onClick={onLogout}>Logout</Link>
+                    <Link style={{color: 'black'}} to={`/`} onClick={onLogout}>Logout</Link>
                 </section>}
 
         </header>

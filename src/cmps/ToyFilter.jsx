@@ -13,24 +13,25 @@ export function ToyFilter({ filterBy, onSetFilter }) {
 
     function handleChange({ target }) {
         let { value, name: field, type } = target
+        console.log('value',value)
 
         value = type === 'number' ? +value : value
         setFilterByToEdit((prevFilter) => ({ ...prevFilter, [field]: value }))
     }
 
     return (
-        <form>
+        <form style={{display: "flex", gap: "1em"}}>
             <div className="radio-sort flex justify-center align-center">
                 <label htmlFor="all">
-                    <input defaultChecked type="radio" name="inStock" value="all" id="all" onChange={handleChange} />
+                    <input defaultChecked type="radio" name="inStock" value={null} id="all" onChange={handleChange} />
                     All
                 </label>
                 <label htmlFor="stock">
-                    <input type="radio" name="inStock" value="stock" id="stock" onChange={handleChange} />
+                    <input type="radio" name="inStock" value={true} id="stock" onChange={handleChange} />
                     In stock
                 </label>
                 <label htmlFor="unStock">
-                    <input type="radio" name="inStock" value="unStock" id="unStock" onChange={handleChange} />
+                    <input type="radio" name="inStock" value={false} id="unStock" onChange={handleChange} />
                     Not in stock
                 </label>
             </div>

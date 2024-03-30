@@ -36,7 +36,7 @@ export function ToyEdit() {
         showSuccessMsg('We did it!')
     }
 
-    return <form onSubmit={submit}>
+    return <form style={{display: "flex", placeContent: "center", marginTop: "2.5em"}} onSubmit={submit}>
         <input
             type="text"
             name="title"

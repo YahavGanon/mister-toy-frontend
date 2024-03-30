@@ -82,8 +82,8 @@ export function LoginSignup() {
 
             </form>
 
-            <div className="btns">
-                <a href="#" onClick={() => setIsSignUp(!isSignup)}>
+            <div style={{textAlign: "center"}} className="btns">
+                <a style={{textDecoration: "none", color:"black"}} href="#" onClick={() => setIsSignUp(!isSignup)}>
                     {isSignup ?
                         'Already a member? Login' :
                         'New user? Signup here'

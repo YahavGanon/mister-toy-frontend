@@ -51,21 +51,24 @@ export function ToyIndex() {
 
             {user ? (
                 <section>
-                    <h3>Our Toys</h3>
+                    <h3 style={{textAlign: "center", fontSize: "1.6em"}}>Our Toys</h3>
                     <main>
                         <div className='toys-actions'>
-                            <button onClick={onAddToy}>Add Toy 🧸</button>
-                            <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
+                            {user.isAdmin === 'true' && <button onClick={onAddToy}>Add Toy 🧸</button>}
+                            <div style={{display: "flex", gap: "1em"}}> 
                             <Pagination filterBy={filterBy} onSetFilter={onSetFilter} />
+                            <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
+                            </div>
                         </div>
-                        {!isLoading
-                            ? <ToyList toys={toys} onRemoveToy={onRemoveToy} />
-                            : <img className="loading-img" src="https://i.pinimg.com/originals/6b/e0/89/6be0890f52e31d35d840d4fe2e10385b.gif" alt="" />
-                        }
+                        <ToyList toys={toys} onRemoveToy={onRemoveToy} />
                     </main>
                 </section>
             ) : (
-                <div>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    placeItems: "center"
+                }}>
                     <h1>You must be a logged in user to purchase our toys...</h1>
                     <img src="https://st2.depositphotos.com/1252248/9434/v/450/depositphotos_94342060-stock-illustration-pop-art-comics-style.jpg" alt="" />
                 </div>

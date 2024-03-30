@@ -27,7 +27,7 @@ function remove(toyId) {
 
 function save(toy) {
     if (toy._id) {
-        return httpService.put(BASE_URL, toy)
+        return httpService.put(BASE_URL + toy._id, toy)
     } else {
         return httpService.post(BASE_URL, toy)
     }
@@ -39,11 +39,12 @@ function getEmptyToy() {
         title: "",
         price: "",
         inStock: true,
+        msgs: []
     }
 }
 
 function getDefaultFilter() {
-    return { txt: '', inStock: 'all', pageIdx: 0, maxPrice: '' }
+    return { txt: '', inStock: null, pageIdx: 0, maxPrice: '' }
 }
 
 function countLabels(dollsArray) {

@@ -10,9 +10,9 @@ export function ToyPreview({ toy }) {
 
 
     return <article>
-        <h4>{toy.title}</h4>
-        {!toy.img && <img className="toy-preview-img" src="https://cdn.dribbble.com/userupload/4008405/file/original-0f5599524e07b7c1752d029e4eab1e39.png?resize=1200x1200&vertical=center" alt="" />}
         {toy.img && <img className="toy-preview-img" src={toy.img} alt="" />}
+        {!toy.img && <img className="toy-preview-img" src="https://cdn.dribbble.com/userupload/4008405/file/original-0f5599524e07b7c1752d029e4eab1e39.png?resize=1200x1200&vertical=center" alt="" />}
+        <h4>{toy.title}</h4>
         <p>Price: <span>{toy.price}</span></p>
     </article>
 }

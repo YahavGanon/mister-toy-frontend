@@ -20,9 +20,9 @@ export function App() {
   return (
     <Provider store={store}>
       <Router>
-        <div>
+        
           <AppHeader />
-          <main>
+          <main className='app-main'>
             <Routes>
               <Route path="/" element={<Home />} >
                 <Route path="/started" element={<Started />} />
@@ -38,7 +38,7 @@ export function App() {
             </Routes>
           </main>
           <AppFooter />
-        </div>
+   
       </Router>
       <UserMsg />
     </Provider>

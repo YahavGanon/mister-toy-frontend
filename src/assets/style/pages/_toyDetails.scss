@@ -1,0 +1,38 @@
+.toy-data {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.toy-card {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background: rgb(235, 79, 65);
+}
+
+.img-details {
+    width: 25vw;
+}
+
+.details-split {
+    display: flex;
+}
+
+.reviews {
+    background: lightgrey;
+    text-align: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.back-list {
+    text-decoration: none;
+    color: black;
+    border: solid 1px black;
+    border-radius: 1em;
+    margin-top: 1em;
+    background: rgb(234, 67, 53);
+}

@@ -14,7 +14,7 @@ export function GoogleMap() {
     
     return (
 
-        <div style={{ height: '40vh', width: '40%' }}>
+        <div style={{ height: '40vh', width: '100%' }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyD3R7f493EHddS6kDnBuhqVtvDKRLsI328" }}
                 center={coords}

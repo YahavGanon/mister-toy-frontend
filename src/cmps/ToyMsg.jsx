@@ -56,9 +56,9 @@ export function ToyMsg({ toy }) {
             </form>
 
 
-            <ul className="bug-list wrap">
+            <ul className="toy-list wrap">
                 {toy.msgs.length > 0 ? toy.msgs.map((msg) => (
-                    <li className="bug-preview" key={msg.id}>
+                    <li className="toy-preview" key={msg.id}>
                         {msg.txt}
 
                         {msg.by && (

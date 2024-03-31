@@ -20,7 +20,7 @@ export function ToyFilter({ filterBy, onSetFilter }) {
     }
 
     return (
-        <form style={{display: "flex", gap: "1em"}}>
+        <form className="filter-cmp">
             <div className="radio-sort flex justify-center align-center">
                 <label htmlFor="all">
                     <input defaultChecked type="radio" name="inStock" value={null} id="all" onChange={handleChange} />

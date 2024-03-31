@@ -1,0 +1,18 @@
+body {
+    margin: auto;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+button {
+    background-color: rgb(234, 67, 53);
+    padding: 0.5em;
+    border-radius: 1em;
+    border: none;
+    cursor: pointer;
+    margin-left: 1em;
+}
+
+.toggle-menu-btn{
+    display: none;
+}
+

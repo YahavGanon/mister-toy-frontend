@@ -1,4 +1,6 @@
-import '../src/assets/style/main.css'
+// import '../src/assets/style/main.css'
+import './assets/style/main.scss'
+
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 

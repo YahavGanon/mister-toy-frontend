@@ -1,0 +1,14 @@
+@import './base/base';
+@import './base/_mixines';
+
+
+@import './cmps/_appHeader';
+@import './cmps/_appFooter';
+@import './cmps/_userMsg';
+@import './cmps/_toyList';
+
+
+@import './pages/_toyIndex';
+@import './pages/_toyDetails';
+@import './pages/_dashboard';
+@import './pages/_home';

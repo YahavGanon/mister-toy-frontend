@@ -55,7 +55,7 @@ export function ToyIndex() {
                     <main>
                         <div className='toys-actions'>
                             {user.isAdmin === 'true' && <button onClick={onAddToy}>Add Toy 🧸</button>}
-                            <div style={{display: "flex", gap: "1em"}}> 
+                            <div className='filters-input'> 
                             <Pagination filterBy={filterBy} onSetFilter={onSetFilter} />
                             <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
                             </div>

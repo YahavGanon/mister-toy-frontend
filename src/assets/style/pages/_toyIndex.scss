@@ -1,0 +1,28 @@
+.filter-form {
+    display: flex;
+}
+
+.filters-input {
+    display: flex;
+    gap: 1em;
+}
+
+.filter-cmp {
+    display: flex;
+    gap: 1em;
+}
+
+@include for-narrow-layout {
+    .filters-input {
+        flex-direction: column;
+    }
+
+    .filter-cmp {
+        flex-direction: column;
+    }
+
+    .toy-list{
+        columns: 2;
+    }
+
+}

@@ -4,8 +4,8 @@ import { GoogleMap } from "../cmps/GoogleMap"
 
 
 export function Dashboard() {
-    return <article>
-        <div className="dashbord">
+    return <article className="dashboard">
+        <div>
             <div className="google-map">
             <h1>Where do we sit?</h1>
             <GoogleMap />
